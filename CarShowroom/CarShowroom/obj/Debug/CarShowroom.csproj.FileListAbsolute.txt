@@ -1,0 +1,11 @@
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Login.resources
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Properties.Resources.resources
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\bin\Debug\CarShowroom.exe.config
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\bin\Debug\CarShowroom.exe
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\bin\Debug\CarShowroom.pdb
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.exe
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.pdb
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Registration.resources
