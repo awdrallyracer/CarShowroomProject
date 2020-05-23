@@ -20,11 +20,11 @@ namespace CarShowroom
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            var RF = new Registration();
-            var c = RF.ShowDialog();
+            var RF = new Registration(); //Registration form
+            var c = RF.ShowDialog(); // showroom 
             if(c == DialogResult.OK)
             {
-                sr.Clients.Add(RF.client);
+                sr.Clients.Add(RF.client); //adding a new client
             }
         }
 
