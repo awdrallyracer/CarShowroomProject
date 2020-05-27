@@ -21,6 +21,14 @@ namespace CarShowroom
             InitializeComponent();
         }
 
+        public Registration(Client Client) : this()
+        {
+            client = Client;
+            passwordBox.Text = client.password;
+            loginBox.Text = client.login;
+            mailBox.Text = client.email;
+        }
+
         private void Registration_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (DialogResult == DialogResult.OK)
@@ -35,14 +43,14 @@ namespace CarShowroom
 
                     try
                     {
-                        client.email = new MailAddress(mailBox.Text);
+                        client.email = mailBox.Text;
                     }
                     catch (ArgumentException)
                     {
-                      
-                       
+
+
                     }
-                    catch(FormatException)
+                    catch (FormatException)
                     {
 
                     }
@@ -51,6 +59,21 @@ namespace CarShowroom
             
         }
 
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            if (client == null)
+            {
+                client = new Client();
+            }
+            client.login = loginBox.Text;
+            client.password = passwordBox.Text;
+            client.email = mailBox.Text;
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
 

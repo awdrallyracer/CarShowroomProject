@@ -17,11 +17,25 @@ namespace CarShowroom.Models
         public List<Car> Cars { private set; get; }
         public List<Order> Orders { private set; get; }
 
+        // If any data changed.
+        public bool IsDirty;
+
         public Showroom()
         {
             Clients = new List<Client>();
             Cars = new List<Car>();
             Orders = new List<Order>();
+        }
+
+        public void AddCar(Car car)
+        {
+            
+            Cars.Add(car);
+        }
+
+        public void AddClient(Client client)
+        {
+            Clients.Add(client);
         }
 
         public void Save()

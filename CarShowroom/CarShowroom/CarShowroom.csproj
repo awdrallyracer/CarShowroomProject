@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarForm.Designer.cs">
+      <DependentUpon>CarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,7 +71,6 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Portion.cs" />
     <Compile Include="Models\Showroom.cs" />
-    <Compile Include="Models\Specs.cs" />
     <Compile Include="Models\Supply.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
@@ -70,6 +81,12 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CarForm.resx">
+      <DependentUpon>CarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +102,8 @@
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\CarShowroom.Models.Car.datasource" />
+    <None Include="Properties\DataSources\CarShowroom.Models.Client.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

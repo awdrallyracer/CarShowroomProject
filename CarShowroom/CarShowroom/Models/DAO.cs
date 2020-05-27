@@ -32,12 +32,12 @@ namespace CarShowroom.Models
         {
             using (Stream stream = File.OpenRead(filePath))
             {
-                var serializer = new BinaryFormatter();
-                Showroom st = (Showroom)serializer.Deserialize(stream);
-                Copy(st.Clients, showroom.Clients);
-                Copy(st.Cars, showroom.Cars);
-                Copy(st.Orders, showroom.Orders);
-                //Copy(st.Supplies, store.Supplies);
+                    var serializer = new BinaryFormatter();
+                    Showroom st = (Showroom)serializer.Deserialize(stream);
+                    Copy(st.Clients, showroom.Clients);
+                    Copy(st.Cars, showroom.Cars);
+                    Copy(st.Orders, showroom.Orders);
+                    //Copy(st.Supplies, store.Supplies);
             }
 
             void Copy<T>(List<T> from, List<T> to)

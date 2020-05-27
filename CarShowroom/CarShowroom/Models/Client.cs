@@ -12,11 +12,11 @@ namespace CarShowroom.Models
     public class Client : User
     {
         public string Brand { set; get; }
-        public Specs Specs { set; get; }
+        public string Specs { set; get; }
         public string Status { set; get; }
         public int Budget { set; get; }
         public override string login { get; set; }
         public override string password { get; set; }
-        public MailAddress email { set; get; }
+        public string email { set; get; }
     }
 }
