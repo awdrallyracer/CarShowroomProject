@@ -16,11 +16,19 @@ namespace CarShowroom.Models
         public List<Client> Clients { private set; get; }
         public List<Car> Cars { private set; get; }
         public List<Order> Orders { private set; get; }
+        private static Showroom showroom;
 
         // If any data changed.
         public bool IsDirty;
-
-        public Showroom()
+       static public Showroom GetShowroom()
+        {
+            if(showroom == null)
+            {
+                showroom = new Showroom();
+            }
+            return showroom;
+        }
+        protected Showroom()
         {
             Clients = new List<Client>();
             Cars = new List<Car>();

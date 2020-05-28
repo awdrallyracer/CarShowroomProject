@@ -14,17 +14,17 @@ namespace CarShowroom
     public partial class Main : Form
     {
         Showroom showroom;
+        Client user;
 
-        public Main()
+        public Main(Client user)
         {
             InitializeComponent();
-
-            showroom = new Showroom();
+            this.user = user;
+            showroom = Showroom.GetShowroom();
             try
             {
-                showroom.Load();
                 carBindingSource.DataSource = showroom.Cars;
-                clientBindingSource.DataSource = showroom.Clients;
+                clientBindingSource.DataSource = showroom.Clients;                
                 carBindingSource.ResetBindings(false);
                 clientBindingSource.ResetBindings(false);
             }
@@ -36,8 +36,7 @@ namespace CarShowroom
 
         private void Cars_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!showroom.IsDirty)
-                return;
+           
             var res = MessageBox.Show("Save data before exit?", "", MessageBoxButtons.YesNoCancel);
             switch (res)
             {
@@ -46,10 +45,13 @@ namespace CarShowroom
                     break;
                 case DialogResult.Yes:
                     showroom.Save();
+                    Application.Exit();
                     break;
                 case DialogResult.No:
+                    Application.Exit();
                     break;
             }
+            
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -121,7 +123,7 @@ namespace CarShowroom
 
         private void editCLientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            var toEdit = clientsGridView.SelectedRows[0].DataBoundItem as Client;
+            var toEdit = clientsGridView.CurrentRow.DataBoundItem as Client;
             var clf = new Registration(toEdit);
             if (clf.ShowDialog() == DialogResult.OK)
             {
@@ -132,7 +134,7 @@ namespace CarShowroom
 
         private void deleteClientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            var toDel = clientsGridView.SelectedRows[0].DataBoundItem as Client;
+            var toDel = clientsGridView.CurrentRow.DataBoundItem as Client;
             var res = MessageBox.Show($"Delete {toDel.Brand} ?", "", MessageBoxButtons.YesNo);
             if (res == DialogResult.Yes)
             {
@@ -140,6 +142,25 @@ namespace CarShowroom
                 clientBindingSource.ResetBindings(false);
                 showroom.IsDirty = true;
             }
+        }
+
+        private void buyButton_Click(object sender, EventArgs e)
+        {
+            
+            var toAdd = carlistGridView.CurrentRow.DataBoundItem as Car;
+            var mbReult = MessageBox.Show($"Are you sure you want to buy {toAdd.Brand} {toAdd.Specs}?" ,"Confirm", MessageBoxButtons.YesNo);
+            if(mbReult == DialogResult.Yes)
+            {
+                user.Cars.Add(toAdd);
+            }
+            
+        }
+
+        private void clientsGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            var c = clientsGridView.CurrentRow.DataBoundItem as Client;
+            carBindingSource1.DataSource = c.Cars;
+            carBindingSource1.ResetBindings(false);
         }
     }
 }

@@ -18,5 +18,7 @@ namespace CarShowroom.Models
         public override string login { get; set; }
         public override string password { get; set; }
         public string email { set; get; }
+
+        public List<Car> Cars { private set; get; } = new List<Car>();
     }
 }

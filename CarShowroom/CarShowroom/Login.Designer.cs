@@ -38,14 +38,14 @@
             // 
             // loginBox
             // 
-            this.loginBox.Location = new System.Drawing.Point(262, 66);
+            this.loginBox.Location = new System.Drawing.Point(34, 62);
             this.loginBox.Name = "loginBox";
             this.loginBox.Size = new System.Drawing.Size(171, 22);
             this.loginBox.TabIndex = 0;
             // 
             // passwordBox
             // 
-            this.passwordBox.Location = new System.Drawing.Point(262, 124);
+            this.passwordBox.Location = new System.Drawing.Point(34, 120);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(171, 22);
@@ -54,7 +54,7 @@
             // loginLaber
             // 
             this.loginLaber.AutoSize = true;
-            this.loginLaber.Location = new System.Drawing.Point(330, 46);
+            this.loginLaber.Location = new System.Drawing.Point(102, 42);
             this.loginLaber.Name = "loginLaber";
             this.loginLaber.Size = new System.Drawing.Size(43, 17);
             this.loginLaber.TabIndex = 2;
@@ -62,7 +62,7 @@
             // 
             // registrationLabel
             // 
-            this.registrationLabel.Location = new System.Drawing.Point(262, 103);
+            this.registrationLabel.Location = new System.Drawing.Point(34, 99);
             this.registrationLabel.Name = "registrationLabel";
             this.registrationLabel.Size = new System.Drawing.Size(171, 24);
             this.registrationLabel.TabIndex = 3;
@@ -70,7 +70,7 @@
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(262, 163);
+            this.registerButton.Location = new System.Drawing.Point(130, 159);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
             this.registerButton.TabIndex = 4;
@@ -80,7 +80,7 @@
             // 
             // enterButton
             // 
-            this.enterButton.Location = new System.Drawing.Point(358, 163);
+            this.enterButton.Location = new System.Drawing.Point(34, 159);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(75, 23);
             this.enterButton.TabIndex = 5;
@@ -92,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(245, 251);
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.registrationLabel);
@@ -101,6 +101,7 @@
             this.Controls.Add(this.loginBox);
             this.Name = "Login";
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

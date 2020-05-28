@@ -42,14 +42,14 @@
             // 
             // loginBox
             // 
-            this.loginBox.Location = new System.Drawing.Point(297, 58);
+            this.loginBox.Location = new System.Drawing.Point(74, 29);
             this.loginBox.Name = "loginBox";
             this.loginBox.Size = new System.Drawing.Size(100, 22);
             this.loginBox.TabIndex = 0;
             // 
             // passwordBox
             // 
-            this.passwordBox.Location = new System.Drawing.Point(297, 110);
+            this.passwordBox.Location = new System.Drawing.Point(74, 74);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(100, 22);
             this.passwordBox.TabIndex = 1;
@@ -57,7 +57,7 @@
             // loginLabel
             // 
             this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(297, 35);
+            this.loginLabel.Location = new System.Drawing.Point(100, 9);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(43, 17);
             this.loginLabel.TabIndex = 6;
@@ -66,7 +66,7 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(297, 87);
+            this.passwordLabel.Location = new System.Drawing.Point(86, 54);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(69, 17);
             this.passwordLabel.TabIndex = 7;
@@ -74,7 +74,7 @@
             // 
             // mailBox
             // 
-            this.mailBox.Location = new System.Drawing.Point(297, 215);
+            this.mailBox.Location = new System.Drawing.Point(75, 168);
             this.mailBox.Name = "mailBox";
             this.mailBox.Size = new System.Drawing.Size(100, 22);
             this.mailBox.TabIndex = 8;
@@ -82,7 +82,7 @@
             // mailLabel
             // 
             this.mailLabel.AutoSize = true;
-            this.mailLabel.Location = new System.Drawing.Point(297, 187);
+            this.mailLabel.Location = new System.Drawing.Point(100, 147);
             this.mailLabel.Name = "mailLabel";
             this.mailLabel.Size = new System.Drawing.Size(42, 17);
             this.mailLabel.TabIndex = 9;
@@ -91,7 +91,7 @@
             // registerButton
             // 
             this.registerButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.registerButton.Location = new System.Drawing.Point(266, 243);
+            this.registerButton.Location = new System.Drawing.Point(32, 196);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
             this.registerButton.TabIndex = 10;
@@ -101,7 +101,7 @@
             // 
             // confirmpassBox
             // 
-            this.confirmpassBox.Location = new System.Drawing.Point(297, 159);
+            this.confirmpassBox.Location = new System.Drawing.Point(74, 122);
             this.confirmpassBox.Name = "confirmpassBox";
             this.confirmpassBox.Size = new System.Drawing.Size(100, 22);
             this.confirmpassBox.TabIndex = 11;
@@ -109,7 +109,7 @@
             // conformpassLabel
             // 
             this.conformpassLabel.AutoSize = true;
-            this.conformpassLabel.Location = new System.Drawing.Point(297, 136);
+            this.conformpassLabel.Location = new System.Drawing.Point(68, 102);
             this.conformpassLabel.Name = "conformpassLabel";
             this.conformpassLabel.Size = new System.Drawing.Size(120, 17);
             this.conformpassLabel.TabIndex = 12;
@@ -118,7 +118,7 @@
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(360, 242);
+            this.cancelButton.Location = new System.Drawing.Point(137, 196);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 13;
@@ -130,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(252, 281);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.conformpassLabel);
             this.Controls.Add(this.confirmpassBox);

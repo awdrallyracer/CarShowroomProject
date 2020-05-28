@@ -21,7 +21,7 @@ namespace CarShowroom
             InitializeComponent();
         }
 
-        public Registration(Client Client) : this()
+        public Registration(Client Client) : this() //может будет удален
         {
             client = Client;
             passwordBox.Text = client.password;
@@ -61,13 +61,13 @@ namespace CarShowroom
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            if (client == null)
+           /* if (client == null)
             {
                 client = new Client();
             }
             client.login = loginBox.Text;
             client.password = passwordBox.Text;
-            client.email = mailBox.Text;
+            client.email = mailBox.Text;*/
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

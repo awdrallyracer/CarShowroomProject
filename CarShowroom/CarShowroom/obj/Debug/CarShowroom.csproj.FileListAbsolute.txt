@@ -11,3 +11,4 @@ C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroo
 C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Registration.resources
 C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.CarForm.resources
 C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Main.resources
+C:\Users\Administrator\source\repos\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Order.resources

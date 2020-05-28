@@ -10,7 +10,7 @@ namespace CarShowroom.Models
     [Serializable]
     class Admin : User
     {
-        public override string login { get; set; }
-        public override string password { get; set; }
+        public override string login { get; set; } = "admin";
+        public override string password { get; set; } = "admin";
     }
 }

@@ -16,7 +16,11 @@ namespace CarShowroom
         public Login()
         {
             InitializeComponent();
+            sr = Showroom.GetShowroom();
+            admin = new Admin();
         }
+
+        Admin admin;
 
         private void registerButton_Click(object sender, EventArgs e)
         {
@@ -28,7 +32,7 @@ namespace CarShowroom
             }
         }
 
-        Showroom sr = new Showroom();
+        Showroom sr;
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -44,16 +48,30 @@ namespace CarShowroom
 
         private void enterButton_Click(object sender, EventArgs e)
         {
+            if(admin.login == loginBox.Text)
+            {
+                if(admin.password == passwordBox.Text)
+                {
+                    //new Main().ShowDialog
+                }
+            }
+            
             foreach(Client c in sr.Clients)
             {
                 if(c.login == loginBox.Text)
                 {
                     if(c.password == passwordBox.Text)
                     {
-                        MessageBox.Show("You are registered");
+                        Hide();
+                        new Main(c).Show();
                     }
                 }
             }
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            sr.Save();
         }
     }
 }

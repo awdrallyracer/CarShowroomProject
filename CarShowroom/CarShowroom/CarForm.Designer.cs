@@ -121,6 +121,22 @@
             // specsComboBox
             // 
             this.specsComboBox.FormattingEnabled = true;
+            this.specsComboBox.Items.AddRange(new object[] {
+            "V4 1.5L Carburator",
+            "V4 1.6L Injection",
+            "V4 2.0L Atmosphere",
+            "V4 2.0L Turbo",
+            "V4 2.5 Turbo",
+            "V6 3.0L Atmosphere",
+            "V6 3.2L TwinTurbo",
+            "V6 3.5L Atmospere",
+            "V8 4.0L Atmosphere",
+            "V8 4.2L Compressor",
+            "V8 5.0L Aatmospere",
+            "V8 5.2L Turbo",
+            "V10 6.0L Atmosphere",
+            "V12 6.2L TwiTurbo",
+            "V12 6.2L Compressor"});
             this.specsComboBox.Location = new System.Drawing.Point(110, 132);
             this.specsComboBox.Name = "specsComboBox";
             this.specsComboBox.Size = new System.Drawing.Size(145, 24);
