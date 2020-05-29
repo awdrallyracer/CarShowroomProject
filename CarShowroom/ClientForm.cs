@@ -74,5 +74,14 @@ namespace CarShowroom
             }
             carBindingSource.ResetBindings(false);
         }
+
+        private void priorirtButton_Click(object sender, EventArgs e)
+        {
+            var cf = new ClientCarForm(client);
+            if (cf.ShowDialog() == DialogResult.OK)
+            {
+                //carBindingSource.ResetBindings(false);
+            }
+        }
     }
 }

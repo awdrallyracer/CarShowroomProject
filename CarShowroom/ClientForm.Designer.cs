@@ -35,6 +35,10 @@
             this.orderPage = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.noPriorityRadio = new System.Windows.Forms.RadioButton();
+            this.priorityRadio = new System.Windows.Forms.RadioButton();
+            this.priorirtButton = new System.Windows.Forms.Button();
             this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,17 +55,14 @@
             this.specsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.noPriorityRadio = new System.Windows.Forms.RadioButton();
-            this.priorityRadio = new System.Windows.Forms.RadioButton();
             this.tabControl.SuspendLayout();
             this.carPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carGridView)).BeginInit();
             this.orderPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -151,6 +152,50 @@
             this.button1.Text = "Buy";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.buyButton_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.priorityRadio);
+            this.groupBox1.Controls.Add(this.noPriorityRadio);
+            this.groupBox1.Location = new System.Drawing.Point(12, 430);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(194, 82);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            // 
+            // noPriorityRadio
+            // 
+            this.noPriorityRadio.AutoSize = true;
+            this.noPriorityRadio.Location = new System.Drawing.Point(30, 21);
+            this.noPriorityRadio.Name = "noPriorityRadio";
+            this.noPriorityRadio.Size = new System.Drawing.Size(94, 21);
+            this.noPriorityRadio.TabIndex = 0;
+            this.noPriorityRadio.TabStop = true;
+            this.noPriorityRadio.Text = "No priority";
+            this.noPriorityRadio.UseVisualStyleBackColor = true;
+            this.noPriorityRadio.CheckedChanged += new System.EventHandler(this.noPriorityRadio_CheckedChanged);
+            // 
+            // priorityRadio
+            // 
+            this.priorityRadio.AutoSize = true;
+            this.priorityRadio.Location = new System.Drawing.Point(30, 48);
+            this.priorityRadio.Name = "priorityRadio";
+            this.priorityRadio.Size = new System.Drawing.Size(73, 21);
+            this.priorityRadio.TabIndex = 1;
+            this.priorityRadio.TabStop = true;
+            this.priorityRadio.Text = "Priority";
+            this.priorityRadio.UseVisualStyleBackColor = true;
+            this.priorityRadio.CheckedChanged += new System.EventHandler(this.noPriorityRadio_CheckedChanged);
+            // 
+            // priorirtButton
+            // 
+            this.priorirtButton.Location = new System.Drawing.Point(581, 431);
+            this.priorirtButton.Name = "priorirtButton";
+            this.priorirtButton.Size = new System.Drawing.Size(91, 23);
+            this.priorirtButton.TabIndex = 3;
+            this.priorirtButton.Text = "Set priority";
+            this.priorirtButton.UseVisualStyleBackColor = true;
+            this.priorirtButton.Click += new System.EventHandler(this.priorirtButton_Click);
             // 
             // imageDataGridViewImageColumn
             // 
@@ -288,44 +333,12 @@
             // 
             this.ordersBindingSource.DataSource = typeof(CarShowroom.Models.Car);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.priorityRadio);
-            this.groupBox1.Controls.Add(this.noPriorityRadio);
-            this.groupBox1.Location = new System.Drawing.Point(12, 430);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(194, 82);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            // 
-            // noPriorityRadio
-            // 
-            this.noPriorityRadio.AutoSize = true;
-            this.noPriorityRadio.Location = new System.Drawing.Point(30, 21);
-            this.noPriorityRadio.Name = "noPriorityRadio";
-            this.noPriorityRadio.Size = new System.Drawing.Size(94, 21);
-            this.noPriorityRadio.TabIndex = 0;
-            this.noPriorityRadio.TabStop = true;
-            this.noPriorityRadio.Text = "No priority";
-            this.noPriorityRadio.UseVisualStyleBackColor = true;
-            this.noPriorityRadio.CheckedChanged += new System.EventHandler(this.noPriorityRadio_CheckedChanged);
-            // 
-            // priorityRadio
-            // 
-            this.priorityRadio.AutoSize = true;
-            this.priorityRadio.Location = new System.Drawing.Point(30, 48);
-            this.priorityRadio.Name = "priorityRadio";
-            this.priorityRadio.Size = new System.Drawing.Size(73, 21);
-            this.priorityRadio.TabIndex = 1;
-            this.priorityRadio.TabStop = true;
-            this.priorityRadio.Text = "Priority";
-            this.priorityRadio.UseVisualStyleBackColor = true;
-            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 524);
+            this.Controls.Add(this.priorirtButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl);
@@ -338,10 +351,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.carGridView)).EndInit();
             this.orderPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -373,5 +386,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton priorityRadio;
         private System.Windows.Forms.RadioButton noPriorityRadio;
+        private System.Windows.Forms.Button priorirtButton;
     }
 }

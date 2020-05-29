@@ -27,3 +27,4 @@ C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.csp
 C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.exe
 C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.pdb
 C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.ClientForm.resources
+C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.ClientCarForm.resources

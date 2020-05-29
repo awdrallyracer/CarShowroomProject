@@ -11,7 +11,7 @@ namespace CarShowroom.Models
     [Serializable]
     public class Client : User
     {
-        public string Brand { set; get; }
+        public string Brand { set; get; } 
         public string Specs { set; get; }
         public string Status { set; get; }
         public int Budget { set; get; }
