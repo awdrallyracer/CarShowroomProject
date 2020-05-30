@@ -11,7 +11,6 @@ namespace CarShowroom.Models
     [Serializable]
     public class Car
     {
-        public int Id { set; get; }
         public string Description { set; get; }
         public string Status { set; get; }
         public string Brand { set; get; }

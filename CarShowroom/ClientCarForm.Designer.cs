@@ -43,7 +43,7 @@
             // brandLabel
             // 
             this.brandLabel.AutoSize = true;
-            this.brandLabel.Location = new System.Drawing.Point(55, 40);
+            this.brandLabel.Location = new System.Drawing.Point(33, 40);
             this.brandLabel.Name = "brandLabel";
             this.brandLabel.Size = new System.Drawing.Size(46, 17);
             this.brandLabel.TabIndex = 0;
@@ -95,9 +95,9 @@
             "Toyota",
             "Volkswagen",
             "Volvo"});
-            this.brandComboBox.Location = new System.Drawing.Point(108, 40);
+            this.brandComboBox.Location = new System.Drawing.Point(89, 40);
             this.brandComboBox.Name = "brandComboBox";
-            this.brandComboBox.Size = new System.Drawing.Size(121, 24);
+            this.brandComboBox.Size = new System.Drawing.Size(141, 24);
             this.brandComboBox.TabIndex = 1;
             // 
             // statusComboBox
@@ -106,9 +106,9 @@
             this.statusComboBox.Items.AddRange(new object[] {
             "New",
             "Used"});
-            this.statusComboBox.Location = new System.Drawing.Point(108, 81);
+            this.statusComboBox.Location = new System.Drawing.Point(89, 81);
             this.statusComboBox.Name = "statusComboBox";
-            this.statusComboBox.Size = new System.Drawing.Size(121, 24);
+            this.statusComboBox.Size = new System.Drawing.Size(141, 24);
             this.statusComboBox.TabIndex = 2;
             // 
             // specsComboBox
@@ -131,15 +131,15 @@
             "V10 6.0L Atmosphere",
             "V12 6.2L TwiTurbo",
             "V12 6.2L Compressor"});
-            this.specsComboBox.Location = new System.Drawing.Point(108, 123);
+            this.specsComboBox.Location = new System.Drawing.Point(89, 122);
             this.specsComboBox.Name = "specsComboBox";
-            this.specsComboBox.Size = new System.Drawing.Size(121, 24);
+            this.specsComboBox.Size = new System.Drawing.Size(141, 24);
             this.specsComboBox.TabIndex = 3;
             // 
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(55, 81);
+            this.statusLabel.Location = new System.Drawing.Point(36, 81);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(48, 17);
             this.statusLabel.TabIndex = 4;
@@ -148,7 +148,7 @@
             // specsLabel
             // 
             this.specsLabel.AutoSize = true;
-            this.specsLabel.Location = new System.Drawing.Point(58, 129);
+            this.specsLabel.Location = new System.Drawing.Point(37, 125);
             this.specsLabel.Name = "specsLabel";
             this.specsLabel.Size = new System.Drawing.Size(47, 17);
             this.specsLabel.TabIndex = 5;
@@ -157,7 +157,7 @@
             // budgetLabel
             // 
             this.budgetLabel.AutoSize = true;
-            this.budgetLabel.Location = new System.Drawing.Point(58, 170);
+            this.budgetLabel.Location = new System.Drawing.Point(36, 168);
             this.budgetLabel.Name = "budgetLabel";
             this.budgetLabel.Size = new System.Drawing.Size(53, 17);
             this.budgetLabel.TabIndex = 6;
@@ -165,15 +165,15 @@
             // 
             // budgetTextBox
             // 
-            this.budgetTextBox.Location = new System.Drawing.Point(111, 164);
+            this.budgetTextBox.Location = new System.Drawing.Point(89, 165);
             this.budgetTextBox.Name = "budgetTextBox";
-            this.budgetTextBox.Size = new System.Drawing.Size(118, 22);
+            this.budgetTextBox.Size = new System.Drawing.Size(141, 22);
             this.budgetTextBox.TabIndex = 7;
             // 
             // acceptButton
             // 
             this.acceptButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.acceptButton.Location = new System.Drawing.Point(61, 213);
+            this.acceptButton.Location = new System.Drawing.Point(39, 204);
             this.acceptButton.Name = "acceptButton";
             this.acceptButton.Size = new System.Drawing.Size(75, 23);
             this.acceptButton.TabIndex = 8;
@@ -183,7 +183,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(177, 213);
+            this.closeButton.Location = new System.Drawing.Point(155, 204);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 9;
@@ -195,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 334);
+            this.ClientSize = new System.Drawing.Size(268, 290);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.acceptButton);
             this.Controls.Add(this.budgetTextBox);

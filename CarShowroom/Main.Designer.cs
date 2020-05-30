@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buyButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,13 +46,13 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Clients = new System.Windows.Forms.TabPage();
+            this.infoShippingLabel = new System.Windows.Forms.Label();
+            this.infoClientLabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.clientsGridView = new System.Windows.Forms.DataGridView();
             this.Vehicles = new System.Windows.Forms.TabPage();
             this.carlistGridView = new System.Windows.Forms.DataGridView();
             this.carsTabControl = new System.Windows.Forms.TabControl();
-            this.infoClientLabel = new System.Windows.Forms.Label();
-            this.infoShippingLabel = new System.Windows.Forms.Label();
             this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,12 +61,6 @@
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.carBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.carBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.brandDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.specsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +68,12 @@
             this.yearDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.carBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.Clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -87,17 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buyButton
-            // 
-            this.buyButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buyButton.Location = new System.Drawing.Point(644, 436);
-            this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(75, 23);
-            this.buyButton.TabIndex = 1;
-            this.buyButton.Text = "Buy";
-            this.buyButton.UseVisualStyleBackColor = true;
-            
             // 
             // cancelButton
             // 
@@ -241,11 +229,32 @@
             this.Clients.Text = "Clients";
             this.Clients.UseVisualStyleBackColor = true;
             // 
+            // infoShippingLabel
+            // 
+            this.infoShippingLabel.AutoSize = true;
+            this.infoShippingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.infoShippingLabel.Location = new System.Drawing.Point(428, 9);
+            this.infoShippingLabel.Name = "infoShippingLabel";
+            this.infoShippingLabel.Size = new System.Drawing.Size(235, 24);
+            this.infoShippingLabel.TabIndex = 3;
+            this.infoShippingLabel.Text = "Info about cars for shipping";
+            // 
+            // infoClientLabel
+            // 
+            this.infoClientLabel.AutoSize = true;
+            this.infoClientLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.infoClientLabel.Location = new System.Drawing.Point(6, 9);
+            this.infoClientLabel.Name = "infoClientLabel";
+            this.infoClientLabel.Size = new System.Drawing.Size(150, 24);
+            this.infoClientLabel.TabIndex = 2;
+            this.infoClientLabel.Text = "Info about clients";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.brandDataGridViewTextBoxColumn1,
@@ -270,6 +279,7 @@
             this.clientsGridView.AllowUserToAddRows = false;
             this.clientsGridView.AllowUserToDeleteRows = false;
             this.clientsGridView.AutoGenerateColumns = false;
+            this.clientsGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.clientsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.loginDataGridViewTextBoxColumn,
@@ -301,7 +311,9 @@
             // 
             this.carlistGridView.AllowUserToAddRows = false;
             this.carlistGridView.AllowUserToDeleteRows = false;
+            this.carlistGridView.AllowUserToResizeRows = false;
             this.carlistGridView.AutoGenerateColumns = false;
+            this.carlistGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.carlistGridView.ColumnHeadersHeight = 29;
             this.carlistGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.carlistGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -319,7 +331,7 @@
             this.carlistGridView.RowHeadersWidth = 51;
             this.carlistGridView.RowTemplate.Height = 24;
             this.carlistGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.carlistGridView.Size = new System.Drawing.Size(815, 308);
+            this.carlistGridView.Size = new System.Drawing.Size(815, 342);
             this.carlistGridView.TabIndex = 0;
             // 
             // carsTabControl
@@ -332,31 +344,11 @@
             this.carsTabControl.Size = new System.Drawing.Size(823, 371);
             this.carsTabControl.TabIndex = 4;
             // 
-            // infoClientLabel
-            // 
-            this.infoClientLabel.AutoSize = true;
-            this.infoClientLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.infoClientLabel.Location = new System.Drawing.Point(6, 9);
-            this.infoClientLabel.Name = "infoClientLabel";
-            this.infoClientLabel.Size = new System.Drawing.Size(150, 24);
-            this.infoClientLabel.TabIndex = 2;
-            this.infoClientLabel.Text = "Info about clients";
-            // 
-            // infoShippingLabel
-            // 
-            this.infoShippingLabel.AutoSize = true;
-            this.infoShippingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.infoShippingLabel.Location = new System.Drawing.Point(428, 9);
-            this.infoShippingLabel.Name = "infoShippingLabel";
-            this.infoShippingLabel.Size = new System.Drawing.Size(235, 24);
-            this.infoShippingLabel.TabIndex = 3;
-            this.infoShippingLabel.Text = "Info about cars for shipping";
-            // 
             // imageDataGridViewImageColumn
             // 
             this.imageDataGridViewImageColumn.DataPropertyName = "Image";
             this.imageDataGridViewImageColumn.HeaderText = "Image";
-            this.imageDataGridViewImageColumn.MinimumWidth = 125;
+            this.imageDataGridViewImageColumn.MinimumWidth = 100;
             this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
             this.imageDataGridViewImageColumn.ReadOnly = true;
             this.imageDataGridViewImageColumn.Width = 125;
@@ -418,45 +410,6 @@
             // carBindingSource
             // 
             this.carBindingSource.DataSource = typeof(CarShowroom.Models.Car);
-            // 
-            // carBindingSource1
-            // 
-            this.carBindingSource1.DataSource = typeof(CarShowroom.Models.Car);
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "login";
-            this.loginDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
-            this.loginDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            this.passwordDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataSource = typeof(CarShowroom.Models.Client);
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(CarShowroom.Models.Order);
             // 
             // brandDataGridViewTextBoxColumn1
             // 
@@ -521,6 +474,45 @@
             this.imageDataGridViewImageColumn1.ReadOnly = true;
             this.imageDataGridViewImageColumn1.Width = 125;
             // 
+            // carBindingSource1
+            // 
+            this.carBindingSource1.DataSource = typeof(CarShowroom.Models.Car);
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "login";
+            this.loginDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
+            this.loginDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passwordDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataSource = typeof(CarShowroom.Models.Client);
+            // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(CarShowroom.Models.Order);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -528,7 +520,6 @@
             this.ClientSize = new System.Drawing.Size(857, 471);
             this.Controls.Add(this.carsTabControl);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.buyButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
@@ -553,7 +544,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button buyButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
@@ -582,13 +572,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage Vehicles;
         private System.Windows.Forms.DataGridView carlistGridView;
-        private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brandDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabControl carsTabControl;
         private System.Windows.Forms.Label infoShippingLabel;
         private System.Windows.Forms.Label infoClientLabel;
@@ -599,5 +582,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
     }
 }

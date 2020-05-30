@@ -53,6 +53,7 @@ namespace CarShowroom
             {
                 if(admin.password == passwordBox.Text)
                 {
+                    Hide();
                     new Main().ShowDialog();
                 }
             }

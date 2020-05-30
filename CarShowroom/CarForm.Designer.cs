@@ -199,6 +199,7 @@
             // 
             // photoPictureBox
             // 
+            this.photoPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.photoPictureBox.Location = new System.Drawing.Point(110, 304);
             this.photoPictureBox.Name = "photoPictureBox";
             this.photoPictureBox.Size = new System.Drawing.Size(145, 70);

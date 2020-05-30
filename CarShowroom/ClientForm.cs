@@ -83,5 +83,17 @@ namespace CarShowroom
                 //carBindingSource.ResetBindings(false);
             }
         }
+
+        private void deleteOrderButton2_Click(object sender, EventArgs e)
+        {
+            var toDel = dataGridView1.CurrentRow.DataBoundItem as Car;
+            var res = MessageBox.Show($"Delete {toDel.Brand} ?", "", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                client.Cars.Remove(toDel);
+                ordersBindingSource.ResetBindings(false);
+                showroom.IsDirty = true;
+            }
+        }
     }
 }
