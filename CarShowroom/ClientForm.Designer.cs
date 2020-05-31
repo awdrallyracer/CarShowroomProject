@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.carPage = new System.Windows.Forms.TabPage();
             this.carGridView = new System.Windows.Forms.DataGridView();
@@ -40,6 +41,8 @@
             this.noPriorityRadio = new System.Windows.Forms.RadioButton();
             this.priorirtButton = new System.Windows.Forms.Button();
             this.deleteOrderButton2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.closeButton = new System.Windows.Forms.Button();
             this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +65,7 @@
             this.orderPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -70,19 +74,21 @@
             // 
             this.tabControl.Controls.Add(this.carPage);
             this.tabControl.Controls.Add(this.orderPage);
-            this.tabControl.Location = new System.Drawing.Point(12, 12);
+            this.tabControl.Location = new System.Drawing.Point(12, 44);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(797, 412);
+            this.tabControl.Size = new System.Drawing.Size(989, 382);
             this.tabControl.TabIndex = 0;
             // 
             // carPage
             // 
             this.carPage.Controls.Add(this.carGridView);
             this.carPage.Location = new System.Drawing.Point(4, 25);
+            this.carPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.carPage.Name = "carPage";
-            this.carPage.Padding = new System.Windows.Forms.Padding(3);
-            this.carPage.Size = new System.Drawing.Size(789, 383);
+            this.carPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.carPage.Size = new System.Drawing.Size(981, 353);
             this.carPage.TabIndex = 0;
             this.carPage.Text = "Cars";
             this.carPage.UseVisualStyleBackColor = true;
@@ -106,21 +112,23 @@
             this.priceDataGridViewTextBoxColumn});
             this.carGridView.DataSource = this.carBindingSource;
             this.carGridView.Location = new System.Drawing.Point(0, 0);
+            this.carGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.carGridView.Name = "carGridView";
             this.carGridView.ReadOnly = true;
             this.carGridView.RowHeadersWidth = 51;
             this.carGridView.RowTemplate.Height = 24;
             this.carGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.carGridView.Size = new System.Drawing.Size(789, 383);
+            this.carGridView.Size = new System.Drawing.Size(977, 354);
             this.carGridView.TabIndex = 0;
             // 
             // orderPage
             // 
             this.orderPage.Controls.Add(this.dataGridView1);
             this.orderPage.Location = new System.Drawing.Point(4, 25);
+            this.orderPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.orderPage.Name = "orderPage";
-            this.orderPage.Padding = new System.Windows.Forms.Padding(3);
-            this.orderPage.Size = new System.Drawing.Size(789, 383);
+            this.orderPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.orderPage.Size = new System.Drawing.Size(981, 353);
             this.orderPage.TabIndex = 1;
             this.orderPage.Text = "Orders";
             this.orderPage.UseVisualStyleBackColor = true;
@@ -129,6 +137,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -142,19 +152,23 @@
             this.priceDataGridViewTextBoxColumn1});
             this.dataGridView1.DataSource = this.ordersBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(789, 383);
+            this.dataGridView1.Size = new System.Drawing.Size(979, 354);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(717, 431);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(225, 481);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 30);
+            this.button1.Size = new System.Drawing.Size(99, 32);
             this.button1.TabIndex = 1;
             this.button1.Text = "Buy";
             this.button1.UseVisualStyleBackColor = true;
@@ -162,18 +176,22 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.priorityRadio);
             this.groupBox1.Controls.Add(this.noPriorityRadio);
-            this.groupBox1.Location = new System.Drawing.Point(12, 430);
+            this.groupBox1.Location = new System.Drawing.Point(12, 431);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(194, 82);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(195, 82);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // priorityRadio
             // 
             this.priorityRadio.AutoSize = true;
-            this.priorityRadio.Location = new System.Drawing.Point(30, 48);
+            this.priorityRadio.Location = new System.Drawing.Point(29, 48);
+            this.priorityRadio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.priorityRadio.Name = "priorityRadio";
             this.priorityRadio.Size = new System.Drawing.Size(73, 21);
             this.priorityRadio.TabIndex = 1;
@@ -186,7 +204,8 @@
             // 
             this.noPriorityRadio.AutoSize = true;
             this.noPriorityRadio.Checked = true;
-            this.noPriorityRadio.Location = new System.Drawing.Point(30, 21);
+            this.noPriorityRadio.Location = new System.Drawing.Point(29, 21);
+            this.noPriorityRadio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.noPriorityRadio.Name = "noPriorityRadio";
             this.noPriorityRadio.Size = new System.Drawing.Size(94, 21);
             this.noPriorityRadio.TabIndex = 0;
@@ -197,9 +216,11 @@
             // 
             // priorirtButton
             // 
-            this.priorirtButton.Location = new System.Drawing.Point(602, 431);
+            this.priorirtButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.priorirtButton.Location = new System.Drawing.Point(225, 441);
+            this.priorirtButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.priorirtButton.Name = "priorirtButton";
-            this.priorirtButton.Size = new System.Drawing.Size(98, 30);
+            this.priorirtButton.Size = new System.Drawing.Size(99, 32);
             this.priorirtButton.TabIndex = 3;
             this.priorirtButton.Text = "Set priority";
             this.priorirtButton.UseVisualStyleBackColor = true;
@@ -207,13 +228,39 @@
             // 
             // deleteOrderButton2
             // 
-            this.deleteOrderButton2.Location = new System.Drawing.Point(602, 467);
+            this.deleteOrderButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteOrderButton2.Location = new System.Drawing.Point(903, 441);
+            this.deleteOrderButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteOrderButton2.Name = "deleteOrderButton2";
-            this.deleteOrderButton2.Size = new System.Drawing.Size(98, 32);
+            this.deleteOrderButton2.Size = new System.Drawing.Size(99, 32);
             this.deleteOrderButton2.TabIndex = 4;
             this.deleteOrderButton2.Text = "Delete order";
             this.deleteOrderButton2.UseVisualStyleBackColor = true;
             this.deleteOrderButton2.Click += new System.EventHandler(this.deleteOrderButton2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(600, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(404, 68);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeButton.Location = new System.Drawing.Point(903, 481);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(99, 32);
+            this.closeButton.TabIndex = 6;
+            this.closeButton.Text = "Exit";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // imageDataGridViewImageColumn
             // 
@@ -238,10 +285,10 @@
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 60;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusDataGridViewTextBoxColumn.Width = 125;
+            this.statusDataGridViewTextBoxColumn.Width = 60;
             // 
             // specsDataGridViewTextBoxColumn
             // 
@@ -265,19 +312,19 @@
             // 
             this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
             this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.yearDataGridViewTextBoxColumn.MinimumWidth = 60;
             this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
             this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn.Width = 125;
+            this.yearDataGridViewTextBoxColumn.Width = 60;
             // 
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 60;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.priceDataGridViewTextBoxColumn.Width = 125;
+            this.priceDataGridViewTextBoxColumn.Width = 60;
             // 
             // carBindingSource
             // 
@@ -306,10 +353,10 @@
             // 
             this.statusDataGridViewTextBoxColumn1.DataPropertyName = "Status";
             this.statusDataGridViewTextBoxColumn1.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn1.MinimumWidth = 60;
             this.statusDataGridViewTextBoxColumn1.Name = "statusDataGridViewTextBoxColumn1";
             this.statusDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.statusDataGridViewTextBoxColumn1.Width = 125;
+            this.statusDataGridViewTextBoxColumn1.Width = 60;
             // 
             // specsDataGridViewTextBoxColumn1
             // 
@@ -333,19 +380,19 @@
             // 
             this.yearDataGridViewTextBoxColumn1.DataPropertyName = "Year";
             this.yearDataGridViewTextBoxColumn1.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.yearDataGridViewTextBoxColumn1.MinimumWidth = 60;
             this.yearDataGridViewTextBoxColumn1.Name = "yearDataGridViewTextBoxColumn1";
             this.yearDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn1.Width = 125;
+            this.yearDataGridViewTextBoxColumn1.Width = 60;
             // 
             // priceDataGridViewTextBoxColumn1
             // 
             this.priceDataGridViewTextBoxColumn1.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn1.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn1.MinimumWidth = 60;
             this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
             this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.priceDataGridViewTextBoxColumn1.Width = 125;
+            this.priceDataGridViewTextBoxColumn1.Width = 60;
             // 
             // ordersBindingSource
             // 
@@ -355,13 +402,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 524);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1016, 519);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.deleteOrderButton2);
             this.Controls.Add(this.priorirtButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClientForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cars_FormClosing);
             this.Load += new System.EventHandler(this.ClientForm_Load);
@@ -372,6 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -392,6 +446,7 @@
         private System.Windows.Forms.RadioButton priorityRadio;
         private System.Windows.Forms.RadioButton noPriorityRadio;
         private System.Windows.Forms.Button priorirtButton;
+        private System.Windows.Forms.Button deleteOrderButton2;
         private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn brandDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
@@ -406,6 +461,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.Button deleteOrderButton2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button closeButton;
     }
 }

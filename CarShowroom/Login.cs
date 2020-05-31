@@ -26,7 +26,7 @@ namespace CarShowroom
         private void registerButton_Click(object sender, EventArgs e)
         {
             var RF = new Registration(); //Registration form
-            var c = RF.ShowDialog(); // showroom 
+            var c = RF.ShowDialog(); 
             if(c == DialogResult.OK)
             {
                 sr.Clients.Add(RF.client); //adding a new client
@@ -46,7 +46,7 @@ namespace CarShowroom
 
             }
         }
-
+        //Вхід до системи
         private void enterButton_Click(object sender, EventArgs e)
         {
             if(admin.login == loginBox.Text)
@@ -65,10 +65,11 @@ namespace CarShowroom
                     if(c.password == passwordBox.Text)
                     {
                         Hide();
-                        new ClientForm(c).Show();
+                        new ClientForm(c).ShowDialog();
                     }
                 }
             }
+            Close();
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)

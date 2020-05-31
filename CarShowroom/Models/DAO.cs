@@ -19,6 +19,15 @@ namespace CarShowroom.Models
             this.showroom = showroom;
         }
 
+        public Showroom Showroom
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        //Збереження даних
         public void Save()
         {
             using (Stream stream = File.Create(filePath))
@@ -28,6 +37,7 @@ namespace CarShowroom.Models
             }
         }
 
+        //Завантаження даних
         public void Load()
         {
             using (Stream stream = File.OpenRead(filePath))
@@ -37,9 +47,9 @@ namespace CarShowroom.Models
                     Copy(st.Clients, showroom.Clients);
                     Copy(st.Cars, showroom.Cars);
                     Copy(st.Orders, showroom.Orders);
-                    //Copy(st.Supplies, store.Supplies);
             }
-
+            
+            //Перенесення списку
             void Copy<T>(List<T> from, List<T> to)
             {
                 to.Clear();

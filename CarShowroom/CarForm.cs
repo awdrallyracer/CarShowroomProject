@@ -11,16 +11,18 @@ using System.Windows.Forms;
 
 namespace CarShowroom
 {
+
+    //Форма додавання нового авто
     public partial class CarForm : Form
     {
         public Car Car { get; set; }
 
-        public CarForm() //Adding new car
+        public CarForm() 
         {
             InitializeComponent();
         }
 
-        // To update an existing product.
+        // Привоєння введених даних моделі
         public CarForm(Car car) : this()
         {
             Car = car;
@@ -32,7 +34,7 @@ namespace CarShowroom
             priceNumericUpDown.Value = car.Price;
             photoPictureBox.Image = car.Image;
         }
-
+        //Зберігання
         private void saveButton_Click(object sender, EventArgs e)
         {
             if (Car == null)
@@ -47,13 +49,13 @@ namespace CarShowroom
             Car.Price = priceNumericUpDown.Value;
             Car.Image = photoPictureBox.Image;
         }
-
+        //Закриття форми
         private void CarForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (DialogResult != DialogResult.OK)
                 return;
         }
-
+        //Завантаження власного зображення для авто
         private void photoPictureBox_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)

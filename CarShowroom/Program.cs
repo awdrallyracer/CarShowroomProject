@@ -16,10 +16,6 @@ namespace CarShowroom
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Main());
-            ///Application.Run(new Registration());
-
-            //Application.Run(new CarForm());
             Application.Run(new Login());
         }
     }

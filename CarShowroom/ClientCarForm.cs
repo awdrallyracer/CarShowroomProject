@@ -13,8 +13,9 @@ namespace CarShowroom
 {
     public partial class ClientCarForm : Form
     {
+        //Форма автопідбору авто за параметрами
         public Client client { get; set; }
-
+        
         public ClientCarForm(Client client)
         {
             InitializeComponent();

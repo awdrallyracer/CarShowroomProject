@@ -9,19 +9,12 @@ namespace CarShowroom.Models
     [Serializable]
     public class Order
     {
-        public Order(List<Car> car, Client client)
-        {
-            Cars = car;
-            Client = client;
-            DateTime = DateTime.Now;
-        }
-        public Order()
-        {
-            Cars = new List<Car>();
-        }
+       //Колекція придбаних авто
         public List<Car> Cars { private set; get; }
+        //Колекція покупців
         public Client Client { private set; get; }
+        //Дані
         public string ClientName { get => Client.login; }
-        public DateTime DateTime { private set; get; }
+
     }
 }

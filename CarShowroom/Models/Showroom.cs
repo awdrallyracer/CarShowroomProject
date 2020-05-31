@@ -11,18 +11,18 @@ namespace CarShowroom.Models
 //Клас автосалон - це колекція: клієнтів + автомобілів + поставок
 {
     [Serializable]
-    public class Showroom
+    public class Showroom : Car
     {
         public List<Client> Clients { private set; get; }
         public List<Car> Cars { private set; get; }
         public List<Order> Orders { private set; get; }
         private static Showroom showroom;
 
-        // If any data changed.
+        // Перевірка зміни даних.
         public bool IsDirty;
-       static public Showroom GetShowroom()
+        static public Showroom GetShowroom()
         {
-            if(showroom == null)
+            if (showroom == null)
             {
                 showroom = new Showroom();
             }
@@ -34,6 +34,7 @@ namespace CarShowroom.Models
             Cars = new List<Car>();
             Orders = new List<Order>();
         }
+        //Вибір приорітету (автопідбору)
         public List<Car> Priority(Client cl)
         {
             List<Car> res = new List<Car>();
@@ -50,22 +51,24 @@ namespace CarShowroom.Models
             return res;
         }
 
+        //Додавання нового авто
         public void AddCar(Car car)
         {
-            
+
             Cars.Add(car);
         }
 
+        //Реєстрація нового клієнта
         public void AddClient(Client client)
         {
             Clients.Add(client);
         }
-
+        //Збереження даних
         public void Save()
         {
             new DAO(this).Save();
         }
-
+        //Завантаження данних з файлу
         public void Load()
         {
             new DAO(this).Load();

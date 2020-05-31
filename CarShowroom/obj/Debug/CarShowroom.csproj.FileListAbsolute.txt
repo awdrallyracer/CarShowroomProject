@@ -19,7 +19,6 @@ C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.csp
 C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.CarForm.resources
 C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Main.resources
 C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Login.resources
-C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Order.resources
 C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Properties.Resources.resources
 C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.Registration.resources
 C:\Users\Administrator\Desktop\CarShowroom\CarShowroom\obj\Debug\CarShowroom.csproj.GenerateResource.cache

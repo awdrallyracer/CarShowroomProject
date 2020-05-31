@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace CarShowroom
 {
+    //Форма адміністратора
     public partial class Main : Form
     {
         Showroom showroom;
@@ -35,7 +36,8 @@ namespace CarShowroom
 
         private void Cars_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+            if (!showroom.IsDirty)
+                return;
             var res = MessageBox.Show("Save data before exit?", "", MessageBoxButtons.YesNoCancel);
             switch (res)
             {
@@ -44,10 +46,8 @@ namespace CarShowroom
                     break;
                 case DialogResult.Yes:
                     showroom.Save();
-                    Application.Exit();
                     break;
                 case DialogResult.No:
-                    Application.Exit();
                     break;
             }
             
@@ -63,18 +63,18 @@ namespace CarShowroom
         {
             Close();
         }
-
+        //Завантажити дані
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showroom.Load();
             carBindingSource.ResetBindings(false);
         }
-
+        //Зберегти дані
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showroom.Save();
         }
-
+        //Додати автомобіль
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var cf = new CarForm();
@@ -85,7 +85,7 @@ namespace CarShowroom
                 showroom.IsDirty = true;
             }
         }
-
+        //Відредагувати автомобіль
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var toEdit = carlistGridView.SelectedRows[0].DataBoundItem as Car;
@@ -96,7 +96,7 @@ namespace CarShowroom
                 showroom.IsDirty = true;
             }
         }
-
+        //Видалити автомобіль
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var toDel = carlistGridView.SelectedRows[0].DataBoundItem as Car;
@@ -108,7 +108,7 @@ namespace CarShowroom
                 showroom.IsDirty = true;
             }
         }
-
+        //Зареєструвати клієента
         private void newClientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var clf = new Registration();
@@ -119,18 +119,7 @@ namespace CarShowroom
                 showroom.IsDirty = true;
             }
         }
-
-        private void editCLientToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            var toEdit = clientsGridView.CurrentRow.DataBoundItem as Client;
-            var clf = new Registration(toEdit);
-            if (clf.ShowDialog() == DialogResult.OK)
-            {
-                clientBindingSource.ResetBindings(false);
-                showroom.IsDirty = true;
-            }
-        }
-
+        //Видалити клієнта
         private void deleteClientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var toDel = clientsGridView.CurrentRow.DataBoundItem as Client;
@@ -147,6 +136,11 @@ namespace CarShowroom
             var c = clientsGridView.CurrentRow.DataBoundItem as Client;
             carBindingSource1.DataSource = c.Cars;
             carBindingSource1.ResetBindings(false);
+        }
+
+        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("CarShowroom Application", "About");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace CarShowroom
             this.client = client;
             showroom = Showroom.GetShowroom();
         }
-
+        //Завантаження збережених даних
         private void ClientForm_Load(object sender, EventArgs e)
         {
             carBindingSource.DataSource = showroom.Cars;
@@ -29,6 +29,7 @@ namespace CarShowroom
             carBindingSource.ResetBindings(false);
             ordersBindingSource.ResetBindings(false);
         }
+        //Придбання
         private void buyButton_Click(object sender, EventArgs e)
         {
 
@@ -37,13 +38,15 @@ namespace CarShowroom
             if (mbReult == DialogResult.Yes)
             {
                 client.Cars.Add(toAdd);
+                showroom.IsDirty = true;
             }
             ordersBindingSource.ResetBindings(false);
 
         }
         private void Cars_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (!showroom.IsDirty)
+                return;
             var res = MessageBox.Show("Save data before exit?", "", MessageBoxButtons.YesNoCancel);
             switch (res)
             {
@@ -52,15 +55,13 @@ namespace CarShowroom
                     break;
                 case DialogResult.Yes:
                     showroom.Save();
-                    Application.Exit();
                     break;
                 case DialogResult.No:
-                    Application.Exit();
                     break;
             }
 
         }
-
+        //Вибир приорітету 
         private void noPriorityRadio_CheckedChanged(object sender, EventArgs e)
         {
             if (priorityRadio.Checked)
@@ -80,10 +81,10 @@ namespace CarShowroom
             var cf = new ClientCarForm(client);
             if (cf.ShowDialog() == DialogResult.OK)
             {
-                //carBindingSource.ResetBindings(false);
+                showroom.IsDirty = true;
             }
         }
-
+        //Відміна замовлення клієнтом
         private void deleteOrderButton2_Click(object sender, EventArgs e)
         {
             var toDel = dataGridView1.CurrentRow.DataBoundItem as Car;
@@ -94,6 +95,11 @@ namespace CarShowroom
                 ordersBindingSource.ResetBindings(false);
                 showroom.IsDirty = true;
             }
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
